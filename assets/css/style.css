@@ -736,38 +736,69 @@ a.card:hover {
 }
 
 .sidebar .toc {
-  background: transparent;
-  border: none;
-  padding: 0;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px 14px;
   margin: 0;
 }
 
 .sidebar .toc h4 {
-  font-size: 0.8rem;
+  font-size: 0.85rem;
+  font-weight: 800;
   margin-bottom: 12px;
-  color: var(--text-muted);
+  color: var(--text);
   letter-spacing: 0.05em;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border);
 }
 
 .sidebar .toc ol {
   margin: 0;
   list-style: none;
   display: grid;
-  gap: 4px;
+  gap: 2px;
+  counter-reset: tocnum;
+}
+
+.sidebar .toc li {
+  counter-increment: tocnum;
 }
 
 .sidebar .toc a {
-  display: block;
+  display: flex;
+  align-items: center;
+  gap: 10px;
   color: var(--text-muted);
-  font-size: 0.9rem;
-  border-left: 2px solid var(--border);
-  padding: 3px 0 3px 12px;
-  line-height: 1.5;
+  font-size: 0.88rem;
+  padding: 6px 8px;
+  border-radius: 8px;
+  line-height: 1.4;
+}
+
+.sidebar .toc a::before {
+  content: counter(tocnum);
+  flex: 0 0 auto;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--accent-soft);
+  color: var(--accent-2);
+  font-size: 0.66rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .sidebar .toc a:hover {
-  color: var(--accent-2);
-  border-left-color: var(--accent);
+  color: var(--text);
+  background: var(--bg-card-hover);
+}
+
+.sidebar .toc a:hover::before {
+  background: var(--accent);
+  color: #fff;
 }
 
 .layout-split .prose {
