@@ -1,23 +1,27 @@
-# pxnas — ゲーム攻略ガイドサイト
+# Corn Tycoon 攻略ガイド（pxnas）
 
-`pxnas.com` 用の静的サイト（ゲーム攻略ガイド）。純粋な HTML / CSS / JS で構成され、ビルド不要です。
+`pxnas.com` 用の静的サイト。**Corn Tycoon**（開発：Ctrl4ltDel）の非公式日本語攻略ガイドです。純粋な HTML / CSS / JS で構成され、ビルド不要です。
 
-## 構成
+## 構成（クリーン URL：ディレクトリ式）
 
 ```
-index.html                トップページ
-guides/
-  index.html              攻略一覧ページ
-  sample-guide-1.html     攻略記事のサンプル①
-  sample-guide-2.html     攻略記事のサンプル②
-privacy.html              プライバシーポリシー
-about.html                運営者情報（About Us）
-terms.html                利用規約（Terms）
-404.html                  404 ページ
-assets/
-  css/style.css           全ページ共通スタイル
-  js/main.js              モバイルメニューなどの軽量 JS
-favicon.svg               ファビコン
+index.html                 トップページ
+blog/index.html            攻略記事一覧
+about/index.html           このサイトについて
+faq/index.html             よくある質問
+glossary/index.html        用語集
+community/index.html       コミュニティ
+updates/index.html         更新記録
+privacy/index.html         プライバシーポリシー
+terms/index.html           利用規約
+contact/index.html         お問い合わせ
+404.html                   404 ページ
+sitemap.xml                sitemap
+robots.txt                 robots
+llms.txt                   AI 検索向けインデックス
+assets/css/style.css       全ページ共通スタイル
+assets/js/main.js          モバイルメニューなど
+favicon.svg                ファビコン
 ```
 
 ## Cloudflare Pages の設定
@@ -27,25 +31,20 @@ favicon.svg               ファビコン
 | Production branch | `main` |
 | Build command | （空欄） |
 | Build output directory | （空欄） |
-| Root directory | （空欄） |
 
-> ビルド不要の静的サイトなので、ビルドコマンド・出力ディレクトリは空欄で OK です。
+## URL 規約
+
+- 全ページ `.html` 拡張子なしのクリーン URL（ディレクトリ式）。
+- 記事は `/blog/{slug}/`（slug は小文字英語・ハイフン区切り・日付なし）。
 
 ## 新しい攻略記事の追加方法
 
-1. `guides/sample-guide-1.html` をコピーして、新しいファイル名（例：`guides/xxx-guide.html`）で保存します。
-2. `<title>` と `<h1>`、本文を実際の内容に書き換えます。
-3. `index.html` と `guides/index.html` の「攻略一覧」にカード（`<a class="card">`）を 1 つ追加して、リンクを新記事に向けます。
-4. 変更を `main` ブランチに push すると、Cloudflare Pages が自動で再デプロイします。
+1. `blog/{slug}/index.html` を作成。
+2. `blog/index.html` の一覧と、`index.html` の最新記事欄、`sitemap.xml` を更新。
+3. `main` に push すると Cloudflare Pages が自動デプロイ。
 
-## ローカルでの確認
-
-このサイトはビルド不要なので、`index.html` をブラウザで直接開くだけでも確認できます。より正確に確認する場合は、このディレクトリで以下を実行して簡易サーバーを起動します。
+## ローカル確認
 
 ```bash
-npx serve .
-# または
 python3 -m http.server 8080
 ```
-
-その後、ブラウザで http://localhost:8080 を開きます。

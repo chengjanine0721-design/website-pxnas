@@ -1,0 +1,25 @@
+# Corn Tycoon 攻略ガイド（pxnas）
+
+> Corn Tycoon（開発：Ctrl4ltDel）の非公式日本語攻略サイト。確認できた仕様だけを書き、公開されていない数値は書きません。
+
+当サイトは非公式のファンガイドです。ゲーム本体は CrazyGames で遊べます。
+
+## 主要ページ
+
+- [Corn Tycoon 攻略ガイド（トップ）](https://pxnas.com/): ゲームの概要・はじめの3歩・全ページ一覧。
+- [ブログ（攻略記事）](https://pxnas.com/blog/): 序盤の進め方や設備の優先順位などの記事。
+- [よくある質問](https://pxnas.com/faq/): 料金・対応端末・セーブなど。
+- [用語集](https://pxnas.com/glossary/): 画面に出る英語と仕組みの言葉の対訳。
+- [コミュニティ](https://pxnas.com/community/): 遊べる場所と情報の探し方。
+- [このサイトについて](https://pxnas.com/about/): 運営者情報と編集方針。
+- [更新記録](https://pxnas.com/updates/): 更新履歴。
+- [プライバシーポリシー](https://pxnas.com/privacy/): 取得する情報と扱わない情報。
+- [利用規約](https://pxnas.com/terms/): 当サイトを使うときの前提。
+
+## 基本情報
+
+- 開発: Ctrl4ltDel
+- 配信: 2025年3月（CrazyGames）
+- エンジン: Unity 6
+- ジャンル: クリッカー / 放置 / 農場 / 経営
+- 連絡先: pxnasadmin@pxnas.com
