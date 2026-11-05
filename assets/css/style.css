@@ -471,9 +471,9 @@ a.card:hover {
 
 /* ------------------------------------------------------------------ リーガルページ */
 .legal {
-  max-width: 760px;
+  max-width: var(--maxw);
   margin: 0 auto;
-  padding: 48px 0 64px;
+  padding: 48px 20px 64px;
 }
 
 .legal h1 {
@@ -720,4 +720,67 @@ a.card:hover {
 .empty h2 {
   color: var(--text);
   margin-bottom: 8px;
+}
+
+/* ------------------------------------------------------------------ 左侧边栏（目次） */
+.layout-split {
+  display: grid;
+  grid-template-columns: 240px minmax(0, 1fr);
+  gap: 48px;
+  align-items: start;
+}
+
+.sidebar {
+  position: sticky;
+  top: 84px;
+}
+
+.sidebar .toc {
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar .toc h4 {
+  font-size: 0.8rem;
+  margin-bottom: 12px;
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
+}
+
+.sidebar .toc ol {
+  margin: 0;
+  list-style: none;
+  display: grid;
+  gap: 4px;
+}
+
+.sidebar .toc a {
+  display: block;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  border-left: 2px solid var(--border);
+  padding: 3px 0 3px 12px;
+  line-height: 1.5;
+}
+
+.sidebar .toc a:hover {
+  color: var(--accent-2);
+  border-left-color: var(--accent);
+}
+
+.layout-split .prose {
+  max-width: none;
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .layout-split {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .sidebar {
+    position: static;
+  }
 }
