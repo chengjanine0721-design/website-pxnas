@@ -784,3 +784,50 @@ a.card:hover {
     position: static;
   }
 }
+
+/* ------------------------------------------------------------------ 用語集 */
+.glossary-search {
+  width: 100%;
+  max-width: 520px;
+  padding: 12px 16px;
+  margin: 8px 0 8px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--text);
+  font-size: 0.95rem;
+  font-family: inherit;
+}
+.glossary-search::placeholder { color: var(--text-muted); }
+.glossary-search:focus { outline: none; border-color: var(--accent); }
+
+.glossary {
+  margin: 8px 0 4px;
+  border-top: 1px solid var(--border);
+}
+.glossary .term {
+  display: grid;
+  grid-template-columns: 180px minmax(0, 1fr);
+  gap: 20px;
+  align-items: baseline;
+  padding: 12px 2px;
+  border-bottom: 1px solid var(--border);
+}
+.glossary dt {
+  font-weight: 700;
+  color: var(--gold);
+  font-size: 1rem;
+  overflow-wrap: anywhere;
+}
+.glossary dd {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.94rem;
+  line-height: 1.6;
+}
+@media (max-width: 640px) {
+  .glossary .term {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+}
