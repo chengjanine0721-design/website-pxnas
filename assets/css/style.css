@@ -832,33 +832,46 @@ a.card:hover {
 .glossary-search::placeholder { color: var(--text-muted); }
 .glossary-search:focus { outline: none; border-color: var(--accent); }
 
-.glossary {
-  margin: 8px 0 4px;
-  border-top: 1px solid var(--border);
+table.glossary-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 6px 0 28px;
+  font-size: 0.95rem;
 }
-.glossary .term {
-  display: grid;
-  grid-template-columns: 180px minmax(0, 1fr);
-  gap: 20px;
-  align-items: baseline;
-  padding: 12px 2px;
-  border-bottom: 1px solid var(--border);
-}
-.glossary dt {
-  font-weight: 700;
-  color: var(--gold);
-  font-size: 1rem;
-  overflow-wrap: anywhere;
-}
-.glossary dd {
-  margin: 0;
+table.glossary-table th {
+  text-align: left;
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
   color: var(--text-muted);
-  font-size: 0.94rem;
+  font-weight: 700;
+  border: none;
+  border-bottom: 2px solid var(--border);
+  padding: 8px 12px;
+  background: transparent;
+}
+table.glossary-table td {
+  border: none;
+  border-bottom: 1px solid var(--border);
+  padding: 12px;
+  vertical-align: top;
+  color: var(--text-muted);
   line-height: 1.6;
 }
+table.glossary-table td:first-child {
+  color: var(--gold);
+  font-weight: 700;
+  width: 30%;
+  white-space: nowrap;
+}
+table.glossary-table tbody tr:last-child td {
+  border-bottom: none;
+}
+table.glossary-table tbody tr:hover td {
+  background: var(--bg-soft);
+}
 @media (max-width: 640px) {
-  .glossary .term {
-    grid-template-columns: 1fr;
-    gap: 4px;
+  table.glossary-table td:first-child {
+    white-space: normal;
+    width: auto;
   }
 }
