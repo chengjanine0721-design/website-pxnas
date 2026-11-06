@@ -80,14 +80,14 @@
                 <tr><th scope="col">英語</th><th scope="col">日本語</th></tr>
               </thead>
               <tbody>
-                <tr><td>Corn</td><td>トウモロコシ。育てて収穫・販売し、お金を稼ぐ作物。</td></tr>
-                <tr><td>Field</td><td>畑。クリックで種まき・水やり・収穫を行う場所。</td></tr>
-                <tr><td>Seeder</td><td>播種機（シーダー）。畑に自動で種をまく設備。</td></tr>
-                <tr><td>Sprinkler</td><td>スプリンクラー（灌漑設備）。作物に自動で水をやる設備。</td></tr>
-                <tr><td>Harvester</td><td>収穫機（ハーベスター）。トウモロコシを自動で収穫する設備。</td></tr>
-                <tr><td>Silo</td><td>サイロ。収穫したトウモロコシを大量に保管する施設。</td></tr>
-                <tr><td>Water tank</td><td>貯水タンク。水を安定供給する施設。</td></tr>
-                <tr><td>Truck</td><td>トラック。市場へ運ぶ輸送手段。アップグレードで運搬量が増える。</td></tr>
+                <tr id="corn"><td>Corn</td><td>トウモロコシ。育てて収穫・販売し、お金を稼ぐ作物。</td></tr>
+                <tr id="field"><td>Field</td><td>畑。クリックで種まき・水やり・収穫を行う場所。</td></tr>
+                <tr id="seeder"><td>Seeder</td><td>播種機（シーダー）。畑に自動で種をまく設備。</td></tr>
+                <tr id="sprinkler"><td>Sprinkler</td><td>スプリンクラー（灌漑設備）。作物に自動で水をやる設備。</td></tr>
+                <tr id="harvester"><td>Harvester</td><td>収穫機（ハーベスター）。トウモロコシを自動で収穫する設備。</td></tr>
+                <tr id="silo"><td>Silo</td><td>サイロ。収穫したトウモロコシを大量に保管する施設。</td></tr>
+                <tr id="water-tank"><td>Water tank</td><td>貯水タンク。水を安定供給する施設。</td></tr>
+                <tr id="truck"><td>Truck</td><td>トラック。市場へ運ぶ輸送手段。アップグレードで運搬量が増える。</td></tr>
               </tbody>
             </table>
 
@@ -97,11 +97,11 @@
                 <tr><th scope="col">英語</th><th scope="col">日本語</th></tr>
               </thead>
               <tbody>
-                <tr><td>Upgrade</td><td>アップグレード。設備・施設の性能を強化すること。</td></tr>
-                <tr><td>Prestige</td><td>プレステージ。進行をリセットし、より高価値な特別品種を解放する機能。</td></tr>
-                <tr><td>Lab</td><td>研究所。生産効率を高める研究を行う場所。</td></tr>
-                <tr><td>Research</td><td>研究。作物の価値や機械の速度などを引き上げる。</td></tr>
-                <tr><td>Piggy bank</td><td>空飛ぶ貯金箱。クリックするとボーナス資金がもらえる特別演出。</td></tr>
+                <tr id="upgrade"><td>Upgrade</td><td>アップグレード。設備・施設の性能を強化すること。</td></tr>
+                <tr id="prestige"><td>Prestige</td><td>プレステージ。進行をリセットし、より高価値な特別品種を解放する機能。</td></tr>
+                <tr id="lab"><td>Lab</td><td>研究所。生産効率を高める研究を行う場所。</td></tr>
+                <tr id="research"><td>Research</td><td>研究。作物の価値や機械の速度などを引き上げる。</td></tr>
+                <tr id="piggy-bank"><td>Piggy bank</td><td>空飛ぶ貯金箱。クリックするとボーナス資金がもらえる特別演出。</td></tr>
               </tbody>
             </table>
 
@@ -111,11 +111,11 @@
                 <tr><th scope="col">英語</th><th scope="col">日本語</th></tr>
               </thead>
               <tbody>
-                <tr><td>Clicker</td><td>クリッカー。クリック操作で進めるゲームの種類。</td></tr>
-                <tr><td>Idle</td><td>放置。操作していない間も収益が生まれる仕組み。</td></tr>
-                <tr><td>Farming</td><td>農業。作物を育てる要素。</td></tr>
-                <tr><td>Business</td><td>経営。お金をやりくりして農場を大きくする要素。</td></tr>
-                <tr><td>Money</td><td>ゲーム内のお金。設備の購入や強化に使う。</td></tr>
+                <tr id="clicker"><td>Clicker</td><td>クリッカー。クリック操作で進めるゲームの種類。</td></tr>
+                <tr id="idle"><td>Idle</td><td>放置。操作していない間も収益が生まれる仕組み。</td></tr>
+                <tr id="farming"><td>Farming</td><td>農業。作物を育てる要素。</td></tr>
+                <tr id="business"><td>Business</td><td>経営。お金をやりくりして農場を大きくする要素。</td></tr>
+                <tr id="money"><td>Money</td><td>ゲーム内のお金。設備の購入や強化に使う。</td></tr>
               </tbody>
             </table>
 
@@ -125,16 +125,20 @@
                 <tr><th scope="col">英語</th><th scope="col">日本語</th></tr>
               </thead>
               <tbody>
-                <tr><td>Left click</td><td>左クリック。種まき・水やり・収穫を行う。</td></tr>
-                <tr><td>WASD</td><td>WASDキー。カメラを移動する。</td></tr>
-                <tr><td>Drag</td><td>ドラッグ。左クリックでカメラを移動する。</td></tr>
-                <tr><td>Camera</td><td>カメラ（視点）。農場全体を見渡す。</td></tr>
+                <tr id="left-click"><td>Left click</td><td>左クリック。種まき・水やり・収穫を行う。</td></tr>
+                <tr id="wasd"><td>WASD</td><td>WASDキー。カメラを移動する。</td></tr>
+                <tr id="drag"><td>Drag</td><td>ドラッグ。左クリックでカメラを移動する。</td></tr>
+                <tr id="camera"><td>Camera</td><td>カメラ（視点）。農場全体を見渡す。</td></tr>
               </tbody>
             </table>
 
             <h3 style="margin-top:40px;">関連ページ</h3>
             <ul>
-              <li><a href="/blog/why-play-corn-tycoon/">Corn Tycoonとは？ゲームの特徴・遊び方・攻略ガイド</a></li>
+              <li><a href="/blog/corn-tycoon-prestige-automation-guide/">攻略：プレステージ・自動化・農場強化のコツ</a></li>
+              <li><a href="/blog/corn-tycoon-farm-upgrade-tips/">攻略：農場の強化・収穫量アップ・経営のコツ</a></li>
+              <li><a href="/blog/corn-tycoon-beginners-guide/">攻略：初心者向けの遊び方とプレステージ2までの進め方</a></li>
+              <li><a href="/blog/corn-tycoon-farm-rebuilding/">プレイ記録：113区画の農場を再建するまで</a></li>
+              <li><a href="/blog/why-play-corn-tycoon/">Corn Tycoonとは？ゲームの特徴・遊び方</a></li>
               <li><a href="/faq/">よくある質問（FAQ）</a></li>
             </ul>
 
